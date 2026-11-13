@@ -56,7 +56,7 @@ Por eso, para el **trabajo de fin de ciclo** decidí montar un *estudio de radio
 El proyecto tiene una parte de **instalación** (cableado, acondicionamiento y montaje de equipos) y otra parte de **sistemas** (servidor de streaming, scripts y copias de seguridad).<br>
 Todo se hizo con un presupuesto limitado, así que hubo que buscar material que fuera ***bueno, bonito y barato***.
 
-Al principio la idea era emitir en FM, pero eso ~~se podía hacer sin problema~~ necesita una licencia que un colegio no puede pedir, así que al final la emisión es solo por internet y en formato podcast.
+Al principio la idea era emitir en FM, pero eso ~~se podía hacer sin problema~~ necesita una licencia que un colegio no se puede permitir, así que al final la emisión es solo por internet y en formato podcast.
 
 > [!NOTE]
 > Este documento es un resumen de la memoria del proyecto adaptado a Markdown para la actividad AE01.11 del módulo de Programación de IA.
@@ -112,8 +112,8 @@ Diseñar, instalar y poner en marcha un estudio de radio en el colegio que permi
 - [x] Instalación de Icecast2 en la Raspberry
 - [x] Pruebas de emisión
 - [x] Formación al profesorado
-- [ ] Automatizar la subida de los programas a Spotify
-- [ ] Añadir una segunda cabina para entrevistas
+- [ ] ~~Automatizar la subida de los programas a Spotify~~
+- [ ] ~~Añadir una segunda cabina para entrevistas~~
 
 ---
 
@@ -166,7 +166,7 @@ Los micrófonos de condensador captan mucho más el ambiente de la sala. Como el
 
 ## 📐 Distribución
 
-El estudio se dividió en dos zonas separadas por un cristal: el **locutorio** y el **control**.
+El estudio se dividió en dos zonas separadas por un cristal: el **locutorio** y la **sala de control**.
 
 <p align="center">
   <img src="img/plano_estudio.svg" alt="Plano del estudio" width="650" title="Plano del estudio (locutorio y control)"><br>
