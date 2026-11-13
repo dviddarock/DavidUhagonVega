@@ -5,10 +5,6 @@
 
 <img src="img/banner.svg" alt="Radio escolar desde cero" width="100%" title="Arenas Sur Radio">
 
-<h3>📻 Montaje de una radio escolar desde cero</h3>
-
-Alumno: <b>David Uhagón Vega</b> · CIFP Villa de Agüimes
-
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white "Lenguaje de los scripts")
 ![Icecast](https://img.shields.io/badge/Icecast2-streaming-F28C28?style=for-the-badge "Servidor de streaming")
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi%204-servidor-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white "Servidor del estudio")
