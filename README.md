@@ -3,39 +3,56 @@
 
 <div align="center">
 
-<img src="img/logo_radio.svg" alt="Logo de la radio" width="180" title="Logo de Arenas Sur Radio">
+<img src="img/banner.svg" alt="Radio escolar desde cero" width="100%" title="Arenas Sur Radio">
 
-<h1>📻 Montaje de una radio escolar desde cero</h1>
+<h3>📻 Montaje de una radio escolar desde cero</h3>
 
-<p><b>Trabajo de fin de ciclo · CFGS Sistemas de Telecomunicaciones e Informáticos</b><br>
-Alumno: David Uhagón Vega</p>
+Alumno: <b>David Uhagón Vega</b> · CIFP Villa de Agüimes
 
-![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white "Lenguaje de los scripts")
-![Icecast](https://img.shields.io/badge/Streaming-Icecast2-orange "Servidor de streaming")
-![Raspberry Pi](https://img.shields.io/badge/Hardware-Raspberry%20Pi%204-C51A4A?logo=raspberrypi&logoColor=white "Servidor del estudio")
-![Estado](https://img.shields.io/badge/Estado-Terminado-brightgreen)
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white "Lenguaje de los scripts")
+![Icecast](https://img.shields.io/badge/Icecast2-streaming-F28C28?style=for-the-badge "Servidor de streaming")
+![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi%204-servidor-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white "Servidor del estudio")
+![Estado](https://img.shields.io/badge/Estado-Terminado-2EA44F?style=for-the-badge "Proyecto terminado")
 
 </div>
+
+<br>
+
+<table align="center">
+  <tr>
+    <td align="center">⏱️<br><b>3 meses</b><br><sub>de trabajo</sub></td>
+    <td align="center">💶<br><b>1330 €</b><br><sub>de presupuesto</sub></td>
+    <td align="center">🎙️<br><b>4</b><br><sub>micrófonos</sub></td>
+    <td align="center">🎧<br><b>100</b><br><sub>oyentes a la vez</sub></td>
+    <td align="center">🌐<br><b>128 kbps</b><br><sub>calidad del stream</sub></td>
+  </tr>
+</table>
 
 ---
 
 # Índice
 
-1. [Introducción](#introducción)
-2. [Objetivos](#objetivos)
-3. [Material utilizado](#material-utilizado)
-4. [Instalación del estudio](#instalación-del-estudio)
-5. [Configuración del streaming](#configuración-del-streaming)
-6. [Cálculos del proyecto](#cálculos-del-proyecto)
-7. [Planificación](#planificación)
-8. [Resultado final](#resultado-final)
-9. [Bibliografía y enlaces](#bibliografía-y-enlaces)
+| Nº | Apartado | De qué trata |
+|:---:|:---|:---|
+| 1 | 📖 [Introducción](#introducción "Ir a la introducción") | Punto de partida y motivo del proyecto |
+| 2 | 🎯 [Objetivos](#objetivos "Ir a los objetivos") | Qué quería conseguir y lista de tareas |
+| 3 | 🧰 [Material utilizado](#material-utilizado "Ir al material") | Equipos de audio, informática y red |
+| 4 | 🔧 [Instalación del estudio](#instalación-del-estudio "Ir a la instalación") | Distribución, cableado y acústica |
+| 5 | 📡 [Configuración del streaming](#configuración-del-streaming "Ir al streaming") | Icecast2, BUTT y script de control |
+| 6 | 🧮 [Cálculos del proyecto](#cálculos-del-proyecto "Ir a los cálculos") | Ancho de banda, muestreo y acústica |
+| 7 | 📅 [Planificación](#planificación "Ir a la planificación") | Gantt, presupuesto y estados |
+| 8 | ✅ [Resultado final](#resultado-final "Ir al resultado") | Cómo quedó y problemas resueltos |
+| 9 | 📚 [Bibliografía y enlaces](#bibliografía-y-enlaces "Ir a la bibliografía") | Webs y archivos del proyecto |
 
 ---
 
 # Introducción
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
+
+</div>
 
 En mi colegio ya se hacían algunos programas de radio, pero se grababan en una clase con un portátil y un micrófono USB, y el sonido se escuchaba bastante mal.  
 Por eso, para el **trabajo de fin de ciclo** decidí montar un *estudio de radio completo* desde cero: desde elegir el sitio y el material hasta dejarlo emitiendo por internet.
@@ -48,13 +65,13 @@ Al principio la idea era emitir en FM, pero eso ~~se podía hacer sin problema~~
 > [!NOTE]
 > Este documento es un resumen de la memoria del proyecto adaptado a Markdown para la actividad AE01.11 del módulo de Programación de IA.
 
-## Situación de partida
+## 🏚️ Situación de partida
 
 - El aula elegida era un antiguo **almacén** de unos 15 m².
 - No tenía tomas de red cerca ni aislamiento.
 - Había muchos ruidos del patio en el recreo.
 
-## ¿Por qué una radio escolar?
+## 💡 ¿Por qué una radio escolar?
 
 > "La radio debe transformarse de aparato de distribución en aparato de comunicación."
 >
@@ -66,13 +83,17 @@ Esta idea de Brecht resume lo que buscaba: que el alumnado no solo escuche, sino
 
 # Objetivos
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
 
-## Objetivo general
+</div>
+
+## 🎯 Objetivo general
 
 Diseñar, instalar y poner en marcha un estudio de radio en el colegio que permita grabar podcasts y emitir en directo por internet.
 
-## Objetivos específicos
+## 📋 Objetivos específicos
 
 1. Diseñar la distribución del estudio
    1. Separar locutorio y control
@@ -86,7 +107,7 @@ Diseñar, instalar y poner en marcha un estudio de radio en el colegio que permi
    - Conectar el emisor (*BUTT*) con el servidor
 4. Formar al profesorado y al alumnado en el uso del estudio
 
-### Lista de tareas del proyecto
+### ☑️ Lista de tareas del proyecto
 
 - [x] Estudio del aula y medidas
 - [x] Presupuesto y pedido de material
@@ -102,11 +123,15 @@ Diseñar, instalar y poner en marcha un estudio de radio en el colegio que permi
 
 # Material utilizado
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
+
+</div>
 
 El presupuesto completo está en el archivo [docs/presupuesto.md](docs/presupuesto.md "Ver presupuesto detallado").
 
-## Equipos de audio
+## 🎚️ Equipos de audio
 
 | Equipo | Modelo / tipo | Uso |
 |:---|:---|:---|
@@ -116,7 +141,7 @@ El presupuesto completo está en el archivo [docs/presupuesto.md](docs/presupues
 | Amplificador de auriculares | 4 salidas | Repartir la señal a los auriculares |
 | Monitores | Pareja de 5" | Escucha en el control |
 
-## Equipos informáticos y red
+## 💻 Equipos informáticos y red
 
 | Equipo | Cantidad | Conexión | Función |
 |:---:|:---:|:---:|:---:|
@@ -137,15 +162,22 @@ Los micrófonos de condensador captan mucho más el ambiente de la sala. Como el
 
 # Instalación del estudio
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
 
-## Distribución
+</div>
+
+## 📐 Distribución
 
 El estudio se dividió en dos zonas separadas por un cristal: el **locutorio** y el **control**.
 
-![Plano del estudio](img/plano_estudio.svg "Plano del estudio (locutorio y control)")
+<p align="center">
+  <img src="img/plano_estudio.svg" alt="Plano del estudio" width="650" title="Plano del estudio (locutorio y control)"><br>
+  <sub><i>Figura 1. Plano del estudio con el locutorio a la izquierda y el control a la derecha.</i></sub>
+</p>
 
-## Cadena de audio
+## 🔊 Cadena de audio
 
 Así va la señal desde el micrófono hasta los oyentes:
 
@@ -161,7 +193,7 @@ flowchart LR
     C -->|Audacity| H[Grabación podcast]
 ```
 
-## Cableado
+## 🔌 Cableado
 
 - Para los micrófonos se usó cable **XLR balanceado**.
   - Conector macho en el micro y hembra en la mesa.
@@ -174,7 +206,7 @@ flowchart LR
 > [!WARNING]
 > Nunca hay que conectar o desconectar los micrófonos con el canal de la mesa abierto y la alimentación *phantom* activada, porque se puede dañar el equipo y los monitores dan un golpe muy fuerte.
 
-## Acondicionamiento acústico
+## 🧽 Acondicionamiento acústico
 
 Se pusieron paneles de espuma en las paredes del locutorio y una alfombra para quitar reverberación. Para medir la reverberación usé la fórmula de Sabine (está en el apartado de [cálculos](#cálculos-del-proyecto "Ir a los cálculos")).
 
@@ -182,11 +214,15 @@ Se pusieron paneles de espuma en las paredes del locutorio y una alfombra para q
 
 # Configuración del streaming
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
+
+</div>
 
 El servidor de streaming es **Icecast2** instalado en una Raspberry Pi con Raspberry Pi OS. Para emitir desde el PC se usa el programa `BUTT` (*Broadcast Using This Tool*), que manda el audio de la mesa al servidor.
 
-## Instalación de Icecast2
+## ⚙️ Instalación de Icecast2
 
 Desde la terminal de la Raspberry:
 
@@ -199,7 +235,7 @@ sudo systemctl start icecast2
 systemctl status icecast2
 ```
 
-## Configuración del servidor
+## 📝 Configuración del servidor
 
 Estas son las partes del fichero `/etc/icecast2/icecast.xml` que cambié:
 
@@ -223,7 +259,7 @@ Estas son las partes del fichero `/etc/icecast2/icecast.xml` que cambié:
 > [!IMPORTANT]
 > Las contraseñas por defecto de Icecast son `hackme`. Hay que cambiarlas siempre antes de abrir el puerto al exterior.
 
-## Configuración de BUTT
+## 📤 Configuración de BUTT
 
 | Parámetro | Valor |
 |:---|---:|
@@ -234,7 +270,7 @@ Estas son las partes del fichero `/etc/icecast2/icecast.xml` que cambié:
 | Bitrate | 128 kbps |
 | Frecuencia de muestreo | 44 100 Hz |
 
-## Script de comprobación
+## 🐍 Script de comprobación
 
 Hice un pequeño script en Python que mira cada 5 minutos si la radio está emitiendo y lo guarda en un log. El script completo está en [scripts/comprobar_stream.py](scripts/comprobar_stream.py "Ver el script").
 
@@ -254,7 +290,7 @@ Para que se ejecute solo se añade esta línea con `crontab -e`:
 */5 * * * * python3 /home/pi/scripts/comprobar_stream.py
 ```
 
-## Funcionamiento de una emisión en directo
+## 🔴 Funcionamiento de una emisión en directo
 
 ```mermaid
 sequenceDiagram
@@ -276,9 +312,13 @@ sequenceDiagram
 
 # Cálculos del proyecto
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
 
-## Ancho de banda del stream
+</div>
+
+## 📶 Ancho de banda del stream
 
 El ancho de banda que necesita el servidor depende del bitrate $b$ y del número de oyentes $N$:
 
@@ -288,11 +328,11 @@ $$
 
 Como la fibra del colegio tiene 300 Mbps de subida, no hay problema.
 
-## Muestreo del audio
+## 〰️ Muestreo del audio
 
 Según el teorema de Nyquist, la frecuencia de muestreo tiene que ser al menos el doble de la frecuencia máxima: $f_s \geq 2 \cdot f_{max}$. Con $f_{max} = 20\ \text{kHz}$ (límite del oído) sale que $f_s \geq 40\ \text{kHz}$, por eso se usa $44{,}1\ \text{kHz}$.
 
-## Espacio de las grabaciones
+## 💾 Espacio de las grabaciones
 
 Las grabaciones se guardan en WAV (sin comprimir) y luego se pasan a MP3. Un programa de 30 minutos en WAV ocupa:
 
@@ -302,7 +342,7 @@ $$
 
 En MP3 a 128 kbps el mismo programa ocupa $128\ 000 \cdot 1800 / 8 \approx 28{,}8\ \text{MB}$.
 
-## Niveles de audio
+## 🎛️ Niveles de audio
 
 Para ajustar la ganancia de los micrófonos en la mesa se trabaja en decibelios:
 
@@ -310,7 +350,7 @@ $$
 G_{dB} = 20 \cdot \log_{10}\left(\frac{V_{salida}}{V_{entrada}}\right)
 $$
 
-## Reverberación del locutorio
+## 🔁 Reverberación del locutorio
 
 Con la fórmula de Sabine se calcula el tiempo de reverberación $T_{60}$ a partir del volumen $V$ de la sala y la absorción $A$:
 
@@ -324,9 +364,13 @@ Antes de poner los paneles salía alrededor de $0{,}9\ \text{s}$ y después baj�
 
 # Planificación
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
 
-## Diagrama de Gantt
+</div>
+
+## 🗓️ Diagrama de Gantt
 
 ```mermaid
 gantt
@@ -347,7 +391,7 @@ gantt
     Memoria                 :d2, after c2, 15d
 ```
 
-## Reparto del presupuesto
+## 💶 Reparto del presupuesto
 
 ```mermaid
 pie title Gasto por tipo de material (€)
@@ -361,7 +405,7 @@ pie title Gasto por tipo de material (€)
     "Piloto EN EL AIRE" : 30
 ```
 
-## Estados del estudio
+## 🔄 Estados del estudio
 
 ```mermaid
 stateDiagram-v2
@@ -378,7 +422,11 @@ stateDiagram-v2
 
 # Resultado final
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
+
+</div>
 
 El estudio quedó funcionando y ahora el alumnado graba programas casi todas las semanas. Los programas se publican como podcast en Spotify con el nombre de **Arenas Sur Radio** 🎧.
 
@@ -392,7 +440,7 @@ Lo que más me ha servido del ciclo para este proyecto:
 >
 > — **Marshall McLuhan**, *Comprender los medios de comunicación* (1964)
 
-## Problemas que tuve
+## 🛠️ Problemas que tuve
 
 1. Zumbido en los monitores
    - Era un **bucle de masa**. Se arregló enchufando todo a la misma regleta.
@@ -401,16 +449,24 @@ Lo que más me ha servido del ciclo para este proyecto:
 3. Eco en el locutorio
    - Se solucionó con los paneles y la alfombra.
 
-<p align="center">
+<div align="center">
+
+![Logo de la radio](img/logo_radio.svg "Logo de Arenas Sur Radio")
+
 <sub>Proyecto realizado en el CIFP Villa de Agüimes · 2026</sub><br>
 🎙️ 📻 🎧 🎚️ 🔊
-</p>
+
+</div>
 
 ---
 
 # Bibliografía y enlaces
 
+<div align="right">
+
 [⬆️ Volver al índice](#índice "Ir al índice")
+
+</div>
 
 - [Documentación oficial de Icecast](https://icecast.org/docs/ "Web oficial de Icecast")
 - [BUTT - Broadcast Using This Tool](https://danielnoethen.de/butt/ "Programa para emitir")
